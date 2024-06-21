@@ -54,4 +54,4 @@ systemctl enable bluetooth
 echo "  Bluetooth enabled"
 systemctl enable avahi-daemon.service
 echo "  Avahi enabled"
-grub-install --efi-directory=/efi ${DISK}
+grub-install --efi-directory=/efi $efi

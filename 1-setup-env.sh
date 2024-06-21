@@ -7,6 +7,8 @@ efiname=archefi
 main=/dev/sdb4
 mainname=archmain
 
+umount -R /mnt
+
 mkswap -L $swapname $swap
 swapon $swap
 mkfs.ext4 -L $mainname $main

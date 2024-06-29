@@ -1,12 +1,12 @@
 hostname=ks-pc-l
 swap=/dev/sdb1
-swapname=archswap
+swapname=swap
 
-efi=/dev/sdb3
-efiname=archefi
+efi=/dev/sdb4
+efiname=archtestefi
 
-main=/dev/sdb4
-mainname=archmain
+main=/dev/sdb3
+mainname=archtestmain
 
 umount -R /mnt
 

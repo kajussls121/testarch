@@ -1,6 +1,6 @@
 swap=/dev/sdb1
-efi=/dev/sdb3
-main=/dev/sdb4
+efi=/dev/sdb4
+main=/dev/sdb3
 USERNAME=ks
 
 sed -i 's/^#en_GB.UTF-8 UTF-8/en_GB.UTF-8 UTF-8/' /etc/locale.gen && locale-gen

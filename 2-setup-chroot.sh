@@ -54,4 +54,8 @@ systemctl enable bluetooth
 echo "  Bluetooth enabled"
 systemctl enable avahi-daemon.service
 echo "  Avahi enabled"
+echo "Installing grub"
 grub-install --efi-directory=/efi $efi
+echo "Installed grub. Making config."
+grub-mkconfig -o /boot/grub/grub.cfg
+echo "Made grub.cfg"

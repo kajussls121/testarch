@@ -21,10 +21,7 @@ genfstab -L /mnt >> /mnt/etc/fstab
 echo $hostname > /mnt/etc/hostname
 cp -rfv 2-setup-chroot.sh /mnt/root/
 
-read -p "Do you want to chroot into the system and run setup-chroot.sh? (yes/no): " confirm_chroot
-if [[ "${confirm_chroot,,}" == "yes" || "${confirm_chroot,,}" == "y" ]]; then
-    arch-chroot /mnt /bin/bash /root/2-setup-chroot.sh
-else
-    echo "Chroot and script execution skipped."
-    echo "Run setup-chroot.sh, once you have chrooted in."
-fi
+echo "Chrooting in and running script."
+arch-chroot /mnt /bin/bash /root/2-setup-chroot.sh
+
+echo "Install finished."
